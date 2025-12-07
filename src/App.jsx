@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import Pillars from './components/Pillars';
