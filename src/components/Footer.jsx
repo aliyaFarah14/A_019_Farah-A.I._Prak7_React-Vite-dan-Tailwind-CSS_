@@ -1,14 +1,15 @@
-import React from 'react'
-import logo from '../assets/logo/logoputih.png'
+import React from 'react';
+import logo from '../assets/logo/logoputih.png';
 
 const Footer = () => {
-  const quickLinks = ['Home', 'About', 'Program', 'Projects', 'Testimonials', 'Contact']
-  const programs = ['Career Talks', 'Extra Classes', 'Project Work', 'Mentoring']
+  const quickLinks = ['Home', 'About', 'Program', 'Projects', 'Testimonials', 'Contact'];
+  const programs = ['Career Talks', 'Extra Classes', 'Project Work', 'Mentoring'];
 
   return (
     <footer className="bg-blue-800 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* 🔹 Grid 3 kolom saja (bukan 4) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div>
             <a href="/" className="flex items-center space-x-2 mb-4">
@@ -24,7 +25,8 @@ const Footer = () => {
 
             <div className="space-y-2 text-sm">
               <div className="flex items-start">
-                <i className="fas fa-map-marker-alt mr-2 mt-1 shrink-0"></i>                <span>
+                <i className="fas fa-map-marker-alt mr-2 mt-1 shrink-0"></i>
+                <span>
                   Jl. Ringroad Selatan, Kragilan, Tamanan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55191
                 </span>
               </div>
@@ -53,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/*Programs */}
+          {/* Programs */}
           <div>
             <h4 className="font-bold mb-4">Programs</h4>
             <ul className="space-y-2 text-sm">
@@ -66,30 +68,15 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Social Media */}
-          <div>
-            <h4 className="font-bold mb-4">Connect With Us</h4>
-            <div className="flex space-x-4">
-              {['facebook-f', 'instagram', 'twitter', 'linkedin-in'].map((icon) => (
-                <a
-                  key={icon}
-                  href="#"
-                  className="text-white hover:text-blue-300 transition-colors"
-                >
-                  <i className={`fab fa-${icon} text-xl`}></i>
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
+        {/* Copyright */}
         <div className="border-t border-blue-700 mt-8 pt-6 text-center text-sm">
           <p>© {new Date().getFullYear()} Ruang Ekspresi | All Rights Reserved</p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
